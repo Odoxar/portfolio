@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'AvenirNext-DemiBold';
+  src: url('AvenirNext-DemiBold.eot');
+  src: url('AvenirNext-DemiBold.woff2') format('woff2'),
+       url('AvenirNext-DemiBold.woff') format('woff'),
+       url('AvenirNext-DemiBold.ttf') format('truetype'),
+       url('AvenirNext-DemiBold.svg#AvenirNext-DemiBold') format('svg'),
+       url('AvenirNext-DemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

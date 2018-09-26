@@ -1,0 +1,28 @@
+<div class="title-block">
+  <h3 class="title">
+    Страница записей
+    <span class="sparkline bar"></span>
+  </h3>
+</div>
+
+<section class="section text-center" *ngIf="!isLoaded">
+  <dsa-loader></dsa-loader>
+</section>
+
+<section class="section" *ngIf="isLoaded">
+  <div class="row">
+    <div class="col-md-6">
+      <dsa-add-event [categories]="categories"></dsa-add-event>
+    </div>
+    <div class="col-md-6">
+      <dsa-add-category (onCategoryAdd)="newCategoryAdded($event)"></dsa-add-category>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <dsa-edit-category [categories]="categories"
+        (onCategoryEdit)="categoryWasEdited($event)"
+      ></dsa-edit-category> 
+    </div>
+  </div>
+</section>
