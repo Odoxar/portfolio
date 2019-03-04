@@ -1,0 +1,20 @@
+@import "../../../../assets/styles/variable.scss";
+
+:host {
+  background-color: $color-light-gray;
+  height: 100px;
+  display: flex; //flex
+
+}
+
+.footer__description {
+  font-size: 18px;
+  color: $color-white;
+  margin: auto;
+  text-align: center;
+  &_right {
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
+  }
+}

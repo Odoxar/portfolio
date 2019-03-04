@@ -1,0 +1,54 @@
+@import "../../assets/styles/variable.scss";
+.projects {
+  margin-bottom: 80px;
+  width: 100%;
+  &_wrap {
+    @media screen and (max-width: 576px) {
+      padding: 0;
+    }
+  }
+  &__item {
+    &_image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &_description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 25px 18px;
+      font-size: 15px;
+      line-height: 1.4;
+      letter-spacing: -0.2px;
+      color: $color-white;
+      transition: all $speed-normal ease-in;
+      background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.5), rgba(5, 5, 5, 0));
+    }
+    &-hover {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+    &_link {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      &:hover+.projects__item_description {
+        background-color: rgba(10, 10, 10, 0.6);
+        @media screen and (max-width: 768px) {
+          background-color: transparent;
+        }
+      }
+      &:focus+.projects__item_description {
+        background-color: transparent;
+      }
+    }
+  }
+}

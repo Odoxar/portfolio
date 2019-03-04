@@ -1,0 +1,20 @@
+<div
+  [class]="'smart-house__row item item'+(1+idx)"
+
+  fxLayoutAlign="center center"
+  fxLayout.lt-md="column"
+  [ngClass.gt-sm]="{'smart-house__row_reverse':odd}"
+>
+  <div class="smart-house__text-wrap" fxFlex="50%">
+    <div class="smart-house__text" [@langAnimation]="animateLanguage" *ngFor="let item of row.content; odd as od">
+      <h4 class="smart-house__text_title" *ngIf="item.title" [ngClass]="{'title_margin': od}" l10nTranslate>{{item.title}}</h4>
+      <p class="smart-house__text_article" l10nTranslate>
+        {{ item.description }}
+      </p>
+    </div>
+  </div>
+  <div class="smart-house_img-container" fxFlex="50%">
+    <img *ngFor="let image of row.images" [src]="'../../assets/images/smart-house/'+image" alt="" class="smart-house_img">
+  </div>
+</div>
+

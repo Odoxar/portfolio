@@ -1,0 +1,165 @@
+@import "../../../../assets/styles/variable.scss";
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 23px;
+  transform: translateX(-50%);
+  &__link {
+    display: block;
+    font-family: gillSans;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -1.1px;
+    text-align: left;
+    color: $color-white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    margin: 0 auto;
+    transition: .3s ease-in;
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    top: 16px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-gray;
+  padding: 37px 0 25px;
+  box-sizing: border-box;
+  height: 100%;
+  backface-visibility: hidden;
+  &__item {
+    font-family: $text-main;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 65px;
+    color: $color-white;
+    opacity: 0.7;
+    background-color: transparent;
+    height: 65px;
+    width: 400px;
+    padding-left: 80px;
+    border: none;
+    transition: background-color $speed-normal, box-shadow $speed-normal, opacity $speed-normal, font-weight $speed-normal - .2s;
+    &_active,
+    &:hover {
+      background-color: rgba($color-white, 0.1);
+      box-shadow: inset -5px 0 0 -1px $color-white;
+      font-weight: 600;
+      opacity: 1;
+    }
+    &:focus {
+      outline: none;
+    }
+    @media screen and (max-width: 599px) {
+      padding-left: 22px;
+      font-size: 16px;
+      line-height: 53px;
+      height: 53px;
+      width: 100%;
+    }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      line-height: 53px;
+      height: 53px;
+    }
+    @media screen and (max-width: 576px) and (orientation: landscape) {
+      line-height: 43px;
+      height: 43px;
+    }
+  }
+  &-lang {
+    margin-top: 14px;
+    display: flex;
+    box-sizing: border-box;
+    &__title {
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      margin-top: 0;
+    }
+    @media screen and (max-width: 599px) {
+      padding-left: 0;
+    }
+  }
+  &__btn {
+    &_close {
+      width: 65px;
+      height: 65px;
+      margin: 0 0 35px 65px;
+      transition: $speed-normal;
+      background-image: url('/assets/images/icons/ic-close.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      @media screen and (max-width: 599px) {
+        margin: 0 0 35px 5px;
+      }
+      @media screen and (max-width: 576px) and (orientation: landscape) {
+        margin: 0 0 0 5px;
+      }
+      &:hover {
+        transform: scale(1.3, 1.3) translateZ(0);
+        /*         &:not([disabled]) {
+          background: transparent;
+        } */
+      }
+      &:active {
+        transform: scale(1, 1) translateZ(0);
+      }
+    }
+  }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    padding: 10px 0;
+  }
+  @media screen and (max-width: 599px) {
+    padding: 8px 0 25px;
+  }
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    padding: 0 0 10px;
+  }
+}
+
+.sign-in {
+  align-self: center;
+  margin-top: auto;
+  &__link {
+    display: block;
+    font-family: $text-main;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    margin-left: auto;
+    border-radius: 4px;
+    padding: 9px 19px;
+    border: solid 1px $color-white;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+    &:hover {
+      background-color: $color-white;
+      color: $color-light-gray;
+    }
+  }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

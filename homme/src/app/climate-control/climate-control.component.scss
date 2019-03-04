@@ -1,0 +1,121 @@
+@import "../../assets/styles/variable.scss";
+:host {
+  display: block;
+}
+
+.climate-control {
+  max-width: 1095px;
+  text-align: center;
+  &__text-wrap {
+    margin-bottom: 100px;
+  }
+  &__description {
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: $color-black;
+    margin-bottom: 25px;
+  }
+}
+
+.configurator {
+  padding: 40px 0;
+  background-color: $color-white-gray;
+  margin-bottom: 100px;
+  @media screen and (max-width: 960px) {
+    position: relative;
+    margin: 0 -30px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0 -15px 100px;
+  }
+  &__description {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.33;
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (max-width: 480px) {
+      padding: 0 25px;
+    }
+  }
+  &__btn {
+    background-color: $color-blue;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    width: 175px;
+    padding: 10px 28px;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    transition: .3s ease-out;
+    &:hover {
+      background-color: #1197d1;
+    }
+  }
+}
+
+.btn-apps {
+  margin: 30px auto;
+  max-width: 305px;
+  height: 97px;
+  border-radius: 20px;
+  border: solid 1px #959FAE; //$color-black
+  box-sizing: border-box;
+  display: flex;
+  text-decoration: none;
+  transition: .3s ease-in-out;
+  pointer-events: none !important;
+  &:hover {
+    background-color: #959FAE; //$color-black
+    & .btn-apps__app {
+      background-image: url(/assets/images/icons/ic-apple-white.svg); // fill= 2D323B
+    }
+    & .btn-apps__play {
+      background-image: url(/assets/images/icons/ic-play-market-white.svg); // fill= 2D323B
+    }
+    & .btn-apps__description,
+    & .btn-apps__name {
+      color: $color-white;
+    }
+  }
+  &__app,
+  &__play {
+    width: 215px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    transition: .3s ease-out;
+  }
+  &__app {
+    background-image: url(/assets/images/icons/ic-apple.svg);
+  }
+  &__play {
+    background-image: url(/assets/images/icons/ic-play-market.svg);
+  }
+  &__description,
+  &__name {
+    text-align: left;
+    padding-left: 70px;
+    color: #959FAE; //$color-black
+    transition: .3s ease-out;
+  }
+  &__description {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+  }
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+  }
+}

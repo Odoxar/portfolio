@@ -1,0 +1,20 @@
+<div class="header-lang" [ngClass]="{'header-lang_white': path}" [ngSwitch]="showLang">
+  <button *ngSwitchCase="'en'" class="btn header-lang__btn header-lang__en" (click)="changeLocale(); animated()">
+    <span class="header-lang__title" *ngIf="media.isActive('lt-sm')">Language -</span>
+    <span class="header-lang__text header-lang__en_text-eng">
+      eng
+    </span>
+    <span class="header-lang__text header-lang__en_text-ukr">
+      укр
+    </span>
+  </button>
+  <button *ngSwitchCase="'ua'" class="btn header-lang__btn header-lang__ua" (click)="changeLocale(); animated()">
+    <span class="header-lang__title" *ngIf="media.isActive('lt-sm')">Мова -</span>
+    <span class="header-lang__text header-lang__ua_text header-lang__ua_text-ukr">
+      укр
+    </span>
+    <span class="header-lang__text header-lang__ua_text header-lang__ua_text-eng">
+      eng
+    </span>
+  </button>
+</div>

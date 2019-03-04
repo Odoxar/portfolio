@@ -1,0 +1,40 @@
+<section class="section smart-house itemset">
+  <div class="smart-house__title-wrap" [@langAnimation]="animateLanguage">
+    <h1 class="smart-house__title title">{{ "smart-house.title" | translate:lang }}</h1>
+  </div>
+  <div>
+    <dsa-row
+      *ngFor="let row of items.rows as rows; odd as odd; index as idx"
+      [odd]="odd"
+      [row]="row"
+      [idx]="idx"
+    ></dsa-row>
+  </div>
+  <div
+    class="smart-house__example"
+    fxLayoutAlign="space-between start"
+    fxLayout.lt-sm="column"
+  >
+    <div
+    class="smart-house__example_item"
+    *ngFor="let example of items.examples"
+    fxFlex="48%"
+    >
+      <div class="list__title" [@langAnimation]="animateLanguage">
+        <span class="list__subtitle" l10nTranslate>{{ example.title }}</span>
+        <span class="list__description" l10nTranslate>{{ example.subtitle }}</span>
+      </div>
+      <ul class="smart-house__example_list list" [@langAnimation]="animateLanguage">
+        <li
+          class="list__item"
+          l10nTranslate
+          *ngFor="let item of example.list"
+        >
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="smart-house__conclusion" [@langAnimation]="animateLanguage">{{ "smart-house.description3" | translate:lang }} </p>
+</section>

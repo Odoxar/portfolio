@@ -1,0 +1,13 @@
+<div class="text-wrapper" [@langAnimation]="animateLanguage">
+  <div class="title" data-content="404">
+    404
+  </div>
+
+  <div class="subtitle" >
+     {{ "pageNotFound.title" | translate:lang }}
+  </div>
+
+  <div class="buttons">
+    <a class="button" [routerLink]="'/main'"> {{ "pageNotFound.btn" | translate:lang }}</a>
+  </div>
+</div>

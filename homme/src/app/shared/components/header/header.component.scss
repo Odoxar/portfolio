@@ -1,0 +1,111 @@
+@import "../../../../assets/styles/variable.scss";
+
+.header {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: .3s ease-in;
+  box-sizing: border-box;
+  &-lang_white {
+    @media screen and (max-width: 576px) {
+      margin-left: auto;
+    }
+  }
+  &_white {
+    color: $color-black !important;
+  }
+  @media screen and (max-width: 1360px) {
+    padding: 0 30px 0;
+  }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    padding: 0 15px 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 15px 0;
+  }
+}
+
+.menu {
+  &__btn {
+    &_open {
+      background-image: url('/assets/images/icons/ic-menu.svg');
+      width: 37px;
+      height: 35px;
+      transition: .3s ease-in;
+      &:hover {
+        transform: scale(1.3, 1.3) translateZ(0);
+      }
+      &:active {
+        transform: scale(1, 1) translateZ(0);
+      }
+    }
+  }
+  &_white {
+    background-image: url('/assets/images/icons/ic-menu-grey.svg');
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  &__link {
+    display: block;
+    font-family: gillSans;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -1.1px;
+    text-align: left;
+    color: $color-white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    margin: 0 auto;
+    transition: .3s ease-in;
+    @media screen and (max-width: 768px) {
+      font-size: 34px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 30px;
+    }
+  }
+  &_white {
+    color: $color-black;
+    text-shadow: none;
+  }
+}
+
+.sign-in {
+  margin-left: auto;
+  &__link {
+    display: block;
+    font-family: $text-main;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    border-radius: 4px;
+    padding: 9px 20px;
+    border: solid 1px $color-white;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+    &:hover {
+      background-color: $color-white;
+      color: $color-gray;
+    }
+  }
+  &_white &__link {
+    color: $color-gray;
+    border: solid 1px $color-gray;
+    &:hover {
+      color: $color-white;
+      background-color: $color-gray;
+    }
+  }
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
+}

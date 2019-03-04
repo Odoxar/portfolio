@@ -1,0 +1,48 @@
+<div class="main skewed" [@contentSlide]="animateLanguage">
+  <div class="main__item main__item_left" >
+    <div class="main__content-wrap">
+      <div class="main__circle circle" >
+        <a routerLink="/smart-house" class="main__link">
+        </a>
+        <div class="circle-half__wrap circle-half__wrap_green">
+          <div class="circle-half circle-half_green">
+            <img src="../../assets/images/icons/ic-music-dark.svg" alt="" class="circle-half_green__icon circle-half_green__icon_music">
+            <img src="../../assets/images/icons/ic-camera-dark.svg" alt="" class="circle-half_green__icon circle-half_green__icon_camera">
+            <img src="../../assets/images/icons/ic-lamp-dark.svg" alt="" class="circle-half_green__icon circle-half_green__icon_lamp">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main__item main__item_right">
+    <div class="main__content-wrap">
+      <div class="main__circle circle">
+        <a routerLink="/climate-control" class="main__link"></a>
+        <div class="circle-half__wrap">
+          <div class="circle-half circle-half_blue">
+            <img src="../../assets/images/icons/ic-temperature-dark.svg" alt="" class="circle-half_blue__icon circle-half_blue__icon_temperature">
+            <img src="../../assets/images/icons/ic-humidity-dark.svg" alt="" class="circle-half_blue__icon circle-half_blue__icon_humidity">
+            <img src="../../assets/images/icons/ic-ventilation-dark.svg" alt="" class="circle-half_blue__icon circle-half_blue__icon_ventilation">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="../../assets/images/icons/icon-orange-on-black.svg" alt="">
+</div>
+<div class="main__text-wrap" [@contentSlide]="animateLanguage">
+    <div class="main__content main__content_left" [@langAnimation]="animateLanguage" #contentLeft>
+      <h2 class="main__title">{{ "main.left.title" | translate:lang }}</h2>
+      <p class="main__description">
+        {{ "main.left.description1" | translate:lang }}
+        <span class="main__description_desktop" *ngIf="media.isActive('gt-xs')">{{ "main.left.description2" | translate:lang }}</span>
+      </p>
+    </div>
+    <div class="main__content main__content_right" [@langAnimation]="animateLanguage" #contentRight>
+      <h2 class="main__title">{{ "main.right.title" | translate:lang }}</h2>
+      <p class="main__description">
+        {{ "main.right.description1" | translate:lang }}
+        <span class="main__description_desktop" *ngIf="media.isActive('gt-xs')">{{ "main.right.description2" | translate:lang }}</span>
+      </p>
+    </div>
+</div>

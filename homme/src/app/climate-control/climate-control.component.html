@@ -1,0 +1,26 @@
+<section class="section climate-control">
+  <div class="climate-control__text-wrap" [@langAnimation]="animateLanguage">
+    <h1 class="climate-control__title title">{{ "climate-control.title" | translate:lang }}</h1>
+    <p class="climate-control__description">{{ "climate-control.description1" | translate:lang }}</p>
+    <p class="climate-control__description">{{ "climate-control.description2" | translate:lang }}</p>
+  </div>
+  <div class="climate-control__configurator configurator" [@langAnimation]="animateLanguage">
+    <p class="configurator__description" >{{ "climate-control.configurator.description" | translate:lang }}</p>
+    <a href="{{'climate-control.configurator.href' | translate:lang}}" rel="nofollow" class="configurator__btn btn">{{ "climate-control.configurator.button" | translate:lang }}</a>
+  </div>
+  <div class="climate-control__mobile-apps">
+    <h2 class="mobile-apps__title title" [@langAnimation]="animateLanguage">{{ "climate-control.mobile-apps.title" | translate:lang }}</h2>
+    <a href="#!" class="mobile-apps__btn btn-apps">
+      <div class="btn-apps__app">
+        <span class="btn-apps__description" [@langAnimation]="animateLanguage">{{ "climate-control.mobile-apps.description" | translate:lang }}</span>
+        <span class="btn-apps__name" [@langAnimation]="animateLanguage">{{ "climate-control.mobile-apps.app" | translate:lang }}</span>
+      </div>
+    </a>
+    <a href="#!" class="mobile-apps__btn btn-apps">
+       <div class="btn-apps__play">
+         <span class="btn-apps__description" [@langAnimation]="animateLanguage">{{ "climate-control.mobile-apps.description" | translate:lang }}</span>
+         <span class="btn-apps__name " [@langAnimation]="animateLanguage">{{ "climate-control.mobile-apps.google" | translate:lang }}</span>
+       </div>
+      </a>
+  </div>
+</section>

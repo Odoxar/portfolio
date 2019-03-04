@@ -1,0 +1,93 @@
+@import "../../../../assets/styles/variable.scss";
+:host {
+  display: block;
+  @media screen and (max-width: 599px) {
+    width: 100%;
+  }
+}
+
+.header-lang {
+  margin-left: 30px;
+  &__btn {
+    font-family: $text-main;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    color: $color-white;
+    width: 50px;
+    height: 35px;
+    text-transform: uppercase;
+    position: relative;
+    @media screen and (max-width: 599px) {
+      width: 100%;
+      height: 53px;
+      padding-left: 22px;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 25px;
+  }
+  @media screen and (max-width: 599px) {
+    margin-left: 0;
+  }
+  &_white>&__btn {
+    color: $color-black !important;
+  }
+  &__text {
+    transition: .3s ease-in;
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    @media screen and (max-width: 599px) {
+      top: 16px;
+      left: 115px;
+    }
+  }
+  &__en {
+    &_text {
+      &-ukr {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      @media screen and (min-width: 600px) {
+        .header-lang__en_text-eng {
+          opacity: 0;
+        }
+        .header-lang__en_text-ukr {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  &__ua {
+    &_text {
+      @media screen and (max-width: 599px) {
+        left: 82px;
+      }
+      &-eng {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      @media screen and (min-width: 600px) {
+        .header-lang__ua_text-ukr {
+          opacity: 0;
+        }
+        .header-lang__ua_text-eng {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  &__title {
+    @media screen and (max-width: 599px) {
+      text-transform: capitalize;
+    }
+  }
+}

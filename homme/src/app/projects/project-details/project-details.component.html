@@ -1,0 +1,27 @@
+<section class="section project" [@detailsAnimation]="id">
+  <h2 class="project__title" l10nTranslate [@langAnimation]="animateLanguage">
+    {{item.title}}
+  </h2>
+  <h4 class="project__subtitle" l10nTranslate [@langAnimation]="animateLanguage">{{item.subtitle}}</h4>
+  <div class="project__slider">
+    <div class="project__slider_item"
+    *ngFor="let slide of item.images; let idx=index"
+    (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)"
+    [class.visible]="slide.visible" [class.hidden]="!slide.visible"
+    >
+      <img [src]="slide.src" [alt]="slide.title" class="project__image" #mainImage [@langAnimation]="slide.visible">
+    </div>
+  </div>
+  <div class="image__box">
+    <div class="image__thumb_wrap" *ngFor="let image of item.images; let idx=index"
+     (click)="changeMainImage(idx)">
+      <img [src]="image.src" [class.active]="image.visible" class="image__thumb">
+    </div>
+  </div>
+  <p class="project__description" l10nTranslate [@langAnimation]="animateLanguage">{{item.description}}</p>
+  <div class="project__navigation navigation">
+    <button class="navigation__btn btn navigation__btn_close" (click)="goBack()"></button>
+    <button class="navigation__btn btn navigation__prev" (click)="prevSlide()"></button>
+    <button class="navigation__btn btn navigation__next" (click)="nextSlide()"></button>
+  </div>
+</section>

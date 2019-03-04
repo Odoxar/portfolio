@@ -1,0 +1,190 @@
+@import "../../../assets/styles/variable.scss";
+:host {
+  display: block;
+}
+
+.project {
+  max-width: 1190px;
+  position: relative;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+    color: $color-light-gray;
+    margin-bottom: 5px;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 0 30px;
+      font-size: 18px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 15px;
+      text-align: left;
+      padding: 0 55px 0 16px;
+    }
+  }
+  &__subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: $color-black;
+    @media screen and (max-width: 576px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 15px;
+      text-align: left;
+      padding: 0 16px;
+    }
+  }
+  &__slider {
+    margin-bottom: 20px;
+  }
+  &__description {
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+    color: $color-black;
+    margin-bottom: 25px;
+    @media screen and (max-width: 768px) {
+      padding: 0 16px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 15px;
+      padding: 0 16px;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    @media screen and (max-width: 768px) {
+      object-fit: cover;
+    }
+  }
+}
+
+.navigation {
+  &__btn {
+    position: absolute;
+    display: block;
+    top: 235px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 55px;
+    height: 55px;
+    transition: .3s ease-in;
+    transform: scale(1, 1);
+    cursor: pointer;
+    &_close {
+      top: -9px;
+      right: 15px;
+      background-image: url('/assets/images/icons/ic-close-grey.svg');
+      @media screen and (max-width: 768px) {
+        top: -18px;
+      }
+      @media screen and (max-width: 576px) {
+        right: 0;
+      }
+    }
+    &:hover {
+      transform: scale(1.2, 1.2);
+      @media screen and (max-width: 768px) {
+        transform: scale(1, 1);
+      }
+    }
+    &:focus,
+    &:active {
+      transform: scale(1, 1);
+    }
+  }
+  &__prev {
+    left: 12px;
+    background-image: url('/assets/images/icons/ic-arrow-left.svg');
+    @media screen and (max-width: 768px) {
+      background-image: url('/assets/images/icons/ic-arrow-up-normal.svg');
+      transform: rotate(90deg);
+      &:hover {
+        transform: scale(1, 1) rotate(90deg);
+      }
+    }
+    @media screen and (max-width: 576px) {
+      left: 0;
+    }
+  }
+  &__next {
+    right: 12px;
+    background-image: url('/assets/images/icons/ic-arrow-right.svg');
+    @media screen and (max-width: 768px) {
+      background-image: url('/assets/images/icons/ic-arrow-up-normal.svg');
+      transform: rotate(270deg);
+      &:hover {
+        transform: scale(1, 1) rotate(270deg);
+      }
+    }
+    @media screen and (max-width: 576px) {
+      right: 0;
+    }
+  }
+}
+
+.image {
+  &__box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  &__thumb {
+    width: 125px;
+    height: 125px;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: $speed-normal;
+    @media screen and (max-width: 992px) {
+      margin: 0 5px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (max-width: 480px) {
+      width: 60px;
+      height: 60px;
+    }
+    @media screen and (max-width: 350px) {
+      width: 50px;
+      height: 50px;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  opacity: 0.7;
+}

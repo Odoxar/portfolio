@@ -1,0 +1,6 @@
+<p class="footer__description" [@langAnimation]="animateLanguage">
+  {{ "footer.description" | translate:lang }} {{ year | date:'yyyy'}}.
+  <span class="footer__description_right">
+     {{ "footer.right" | translate:lang }}
+  </span>
+</p>

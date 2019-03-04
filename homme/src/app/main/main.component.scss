@@ -1,0 +1,468 @@
+@import "../../assets/styles/variable.scss";
+:host {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden; //width: 100%;
+}
+
+.main {
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.9px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+    padding-bottom: 15px;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+  }
+  &__description {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+    /*     @media screen and (max-width: 576px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+      font-size: 17px;
+    }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      font-size: 15px;
+    }
+    @media screen and (max-width: 576px) and (orientation: portrait) {
+      font-size: 15px;
+    } */
+  }
+  &__item {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    &_right {
+      z-index: 1;
+      & .main__content-wrap {
+        background-image: url('/assets/images/main/right.jpg');
+        background-position: 110% 0;
+        background-size: contain;
+        @media screen and (min-aspect-ratio: 5/4) and (max-aspect-ratio: 4/3) {
+          background-position: -105% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 4/3) and (max-aspect-ratio: 3/2) {
+          background-position: -185% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 3/2) and (max-aspect-ratio: 8/5) {
+          background-position: -100% 15%;
+          background-size: 120% 100%;
+        }
+        @media screen and (min-aspect-ratio: 8/5) and (max-aspect-ratio: 5/3) {
+          background-position: 450% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (aspect-ratio: 8/5) {
+          background-position: 450% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 5/3) and (max-aspect-ratio: 16/9) {
+          background-position: 235% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 16/9) and (max-aspect-ratio: 18/9) {
+          background-position: 135% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (aspect-ratio: 16/9) {
+          background-position: 215% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (aspect-ratio: 1366/768) {
+          background-position: 200% 50%;
+          background-size: auto 100%;
+        }
+        /*mobile aspect ratio media query*/
+        @media screen and (max-aspect-ratio: 9/19) {
+          background-position: 32% 300%;
+          background-size: auto 95%;
+        }
+        @media screen and (min-aspect-ratio: 9/19) and (max-aspect-ratio: 9/16) {
+          background-position: 28% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 9/16) and (max-aspect-ratio: 5/8) {
+          background-position: 30% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 5/8) and (max-aspect-ratio: 2/3) {
+          background-position: 25% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 2/3) and (max-aspect-ratio: 3/4) {
+          background-position: 20% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (aspect-ratio: 2/3) {
+          background-position: 20% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 4/5) {
+          background-position: 5% 50%;
+          background-size: auto 100%;
+        }
+      }
+    }
+    &_left {
+      z-index: 2;
+      width: 50vw;
+      & .main__content-wrap {
+        background-image: url('/assets/images/main/left.jpg');
+        background-size: contain;
+        @media screen and (min-aspect-ratio: 5/4) and (max-aspect-ratio: 4/3) {
+          background-position: 155% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 4/3) and (max-aspect-ratio: 3/2) {
+          background-position: 220% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 3/2) and (max-aspect-ratio: 8/5) {
+          background-position: -226% 70%;
+          background-size: 93% 100%;
+        }
+        @media screen and (min-aspect-ratio: 8/5) and (max-aspect-ratio: 5/3) {
+          background-position: -180% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 5/3) and (max-aspect-ratio: 16/9) {
+          background-position: -128% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 16/9) and (max-aspect-ratio: 18/9) {
+          background-position: -40% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (aspect-ratio: 1366/768) {
+          background-position: -55% 50%;
+          background-size: auto 100%;
+        }
+        /*mobile aspect ratio media query*/
+        @media screen and (max-aspect-ratio: 9/19) {
+          background-position: 47% -200%;
+          background-size: auto 95%;
+        }
+        @media screen and (min-aspect-ratio: 9/19) and (max-aspect-ratio: 9/16) {
+          background-position: 50% -200%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 9/16) and (max-aspect-ratio: 5/8) {
+          background-position: 55% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 5/8) and (max-aspect-ratio: 2/3) {
+          background-position: 60% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 2/3) and (max-aspect-ratio: 3/4) {
+          background-position: 65% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (aspect-ratio: 2/3) {
+          background-position: 65% 50%;
+          background-size: auto 100%;
+        }
+        @media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 4/5) {
+          background-position: 70% 50%;
+          background-size: auto 100%;
+        }
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    width: 300px;
+    margin: 0 90px;
+    text-align: left;
+    color: $color-white;
+    z-index: 2;
+    transform: translateY(-50%);
+    cursor: default;
+    &_right {
+      right: 0;
+      flex-direction: column-reverse;
+      & .main__title {
+        padding-top: 15px;
+        padding-bottom: 0;
+        @media screen and (max-width: 768px) {
+          padding-top: 5px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        top: 75%;
+      }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        top: 50%;
+      }
+      @media screen and (max-width: 576px) and (orientation: landscape) {
+        top: 80%;
+      }
+      @media screen and (max-width: 480px) {
+        top: 81%;
+      }
+      /* @media screen and (max-width: 768px) {
+        transform: translateY(100%);
+      }
+      @media screen and (max-width: 576px) {
+        transform: translateY(50%);
+      }
+      @media screen and (max-width: 480px) {
+        transform: translateY(70%);
+      }
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+        transform: translateY(70%);
+      }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        transform: translateY(-50%);
+      }
+      @media screen and (max-width: 576px) and (orientation: portrait) {
+        transform: translateY(80%);
+      }
+      @media screen and (max-width: 480px) and (orientation: portrait) {
+        transform: translateY(110%);
+      } */
+    }
+    &_left {
+      left: 0;
+      @media screen and (max-width: 768px) {
+        top: 25%;
+      }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        top: 50%;
+      }
+      @media screen and (max-width: 576px) and (orientation: landscape) {
+        top: 30%;
+      }
+      @media screen and (max-width: 480px) {
+        top: 22%;
+      }
+      @media screen and (max-width: 480px) and (orientation: landscape) {
+        top: 35%;
+      }
+      /* @media screen and (max-width: 768px) {
+        transform: translateY(-150%);
+      }
+      @media screen and (max-width: 576px) {
+        transform: translateY(-100%);
+      }
+      @media screen and (max-width: 480px) {
+        transform: translateY(-150%);
+      }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        transform: translateY(-50%);
+      }
+      @media screen and (max-width: 576px) and (orientation: portrait) {
+        transform: translateY(-160%);
+      }
+      @media screen and (max-width: 480px) and (orientation: portrait) {
+        transform: translateY(-210%);
+      } */
+    }
+    &-wrap {
+      width: 100vw;
+      min-height: 100vh;
+      background-repeat: no-repeat;
+      background-size: 80% 100%;
+      &:after {
+        display: block;
+        content: '';
+        background-color: rgba(19, 23, 29, 0.7);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      margin: 0 35px;
+    }
+    @media screen and (max-width: 991px) {
+      margin: 0 35px;
+      width: 235px;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 0 15px;
+      width: 210px;
+    }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      width: 196px;
+    }
+    @media screen and (max-width: 576px) {
+      margin: 0 15px;
+      width: 210px;
+    }
+    @media screen and (max-width: 576px) and (orientation: landscape) {
+      width: 184px;
+    }
+    @media screen and (max-width: 480px) {
+      margin: 0 0 0 15px;
+      width: 180px;
+    }
+    /*     @media screen and (max-width: 768px) and (orientation: landscape) {
+      width: 196px;
+    }
+    @media screen and (max-width: 576px) and (orientation: portrait) {
+      width: 280px;
+    }
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      width: 155px;
+    }
+    @media screen and (max-width: 480px) and (orientation: portrait) {
+      width: 185px;
+    } */
+  }
+  &__link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    background-image: url(/assets/images/icons/icon-orange-on-black.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    &:hover {
+      &~.circle-half__wrap {
+        transform: rotate(30deg) scale(1.06, 1.06);
+        box-shadow: 2px 1px 7px 5px rgba(36, 42, 49, 0.53);
+      }
+      &~.circle-half__wrap_green {
+        box-shadow: 2px 1px 8px 7px rgba(35, 44, 38, 0.6);
+      }
+    }
+    &:focus~.circle-half__wrap {
+      box-shadow: none;
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  &__circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 350px;
+    height: 343px;
+  }
+}
+
+.skewed {
+  & .main__item_left {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+    & .main__content-wrap {
+      transform: skew(30deg);
+      margin-left: 1000px;
+    }
+  }
+}
+
+.circle {
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 1200px) {
+    transform:translate(-50%, -50%) scale(0.8);
+  }
+  @media screen and (max-width: 991px) {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  @media screen and (max-width: 768px) {
+    transform: translate(-50%, -50%) scale(0.45);
+  }
+  @media screen and (max-width: 576px) {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  @media screen and (max-width: 576px) and (orientation: landscape) {
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    transform: translate(-50%, -50%) scale(0.65);
+  }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    transform: translate(-50%, -50%) scale(0.45);
+  }
+  &-half {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    &__wrap {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      transform: rotate(30deg);
+      transition: all 0.3s ease-out;
+    }
+    &_blue {
+      background-image: url(/assets/images/icons/blue-circle.svg);
+      background-position: 100% 50%;
+      &__icon {
+        position: absolute;
+        transform: rotate(-30deg);
+        &_temperature {
+          top: 53px;
+          right: 32%;
+        }
+        &_humidity {
+          top: 44%;
+          right: 47px;
+        }
+        &_ventilation {
+          bottom: 70px;
+          left: 63%;
+        }
+      }
+    }
+    &_green {
+      background-image: url(/assets/images/icons/green-circle.svg);
+      background-position: 0% 50%;
+      &__icon {
+        position: absolute;
+        transform: rotate(-30deg);
+        &_music {
+          top: 73px;
+          left: 24%;
+        }
+        &_camera {
+          top: 51%;
+          left: 46px;
+        }
+        &_lamp {
+          bottom: 57px;
+          left: 112px;
+        }
+      }
+    }
+  }
+}

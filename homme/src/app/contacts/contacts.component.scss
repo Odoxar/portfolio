@@ -1,0 +1,46 @@
+@import "../../assets/styles/variable.scss";
+
+.contacts {
+  text-align: center;
+  &__title {
+    font-family: $text-main;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+    color: $color-black;
+    margin-bottom: 30px;
+    @media screen and (max-width: 576px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  &__work-time {
+    margin-bottom: 50px;
+    &_description {
+      padding-right: 5px;
+    }
+  }
+  &__list {
+    width: 480px;
+    margin: auto;
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+  }
+  &__item {
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+    color: $color-black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    &_image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 30px;
+    }
+  }
+}

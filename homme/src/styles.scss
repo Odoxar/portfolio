@@ -1,0 +1,246 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/styles/fonts.scss";
+@import "./assets/styles/variable.scss";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*---------*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $text-main;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+}
+
+.mnml-spinner {
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  animation: basic 1s infinite linear;
+}
+
+.mnml-spinner.dark {
+  border-color: rgba(0, 0, 0, 0.2);
+  border-top-color: rgba(0, 0, 0, 1);
+}
+
+@keyframes basic {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(359.9deg);
+  }
+}
+
+.ex {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ex--light {
+  background-color: rgba(255, 255, 255, .5)
+}
+
+.section {
+  margin: 140px auto;
+  padding: 0 32px;
+  @media screen and (max-width: 960px) {
+    margin: 140px auto 70px;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 110px auto 70px;
+    padding: 0 15px;
+  }
+  @media screen and (max-width: 576px) {
+    margin: 90px auto 70px;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.9px;
+  color: $color-black;
+  margin-bottom: 30px;
+  text-align: center;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.img {
+  width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal {
+  overflow-Y: hidden;
+}

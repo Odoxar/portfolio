@@ -1,0 +1,17 @@
+
+<div class="app-container" #appContainer>
+  <div class="menu-bar" *ngIf="menuState"  [@sidenavAnimation]>
+    <dsa-menu [appContainer]="appContainer"></dsa-menu>
+  </div>
+
+    <div  class="app-header" [ngClass]="{'app-header_scroll': scroll, 'app-header__page': pathEqual()}" [@headerScroll]="scroll"
+     >
+      <dsa-header [appContainer]="appContainer"></dsa-header>
+    </div>
+    <div class="app-content">
+      <router-outlet></router-outlet>
+    <footer class="footer" *ngIf="pathEqual()">
+      <dsa-footer></dsa-footer>
+    </footer>
+    </div>
+</div>

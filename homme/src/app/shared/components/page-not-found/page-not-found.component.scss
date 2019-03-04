@@ -1,0 +1,62 @@
+@import "../../../../assets/styles/variable.scss";
+
+$color1: #EE4B5E;
+$color2: #342643;
+$color3: #1FA9D6;
+
+:host {
+  font-family: $text-main;
+  color: $color-black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.text-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 6em;
+  font-weight: 700;
+  @media screen and (max-width: 480px) {
+    font-size: 5em;
+  }
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: 700;
+  color: $color-light-gray;
+  text-align: center;
+  padding: 0 10px 30px;
+  @media screen and (max-width: 480px) {
+    font-size: 26px;
+  }
+}
+
+.buttons {
+    margin: 30px;
+    
+    a.button {
+        font-weight: 700;
+        border: 2px solid $color-light-gray;
+        text-decoration: none;
+        padding: 15px;
+        text-transform: uppercase;
+        color: $color-light-gray;
+        border-radius: 26px;
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+            background-color: $color-light-gray;
+            color: white;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    
+}

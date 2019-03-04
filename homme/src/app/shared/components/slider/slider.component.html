@@ -1,0 +1,20 @@
+<div class="slider" >
+  <div class="slide" *ngFor="let item of items; let idx = index" [@thumbState]="idx === counter ? 'active' : 'inactive'">
+      <h2 class="slide__title" l10nTranslate [@langAnimation]="animateLanguage">
+        {{item.title}} <br>
+        <span l10nTranslate class="slide__subtitle">{{ item.subtitle }}</span>
+      </h2>
+      <div class="slide__image_wrap">
+        <img [src]="item.src" [alt]="item.title" class="slide__image">
+      </div>
+      <!-- <p class="slide__description" l10nTranslate [@langAnimation]="animateLanguage">{{item.description}}</p> -->
+  </div>
+  <div class="slide__navigation navigation" >
+    <button class="navigation__btn btn navigation__prev" (click)="dec(items.length-1)">
+      <span class="navigation__icon navigation__icon_left"></span>
+    </button>
+    <button class="navigation__btn btn navigation__next" (click)="inc(items.length-1)">
+      <span class="navigation__icon navigation__icon_right"></span>
+    </button>
+  </div>
+</div>

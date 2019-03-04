@@ -1,0 +1,24 @@
+<header class="header">
+  <button mat-button class="btn menu__btn_open" [ngClass]="{'menu_white': pathEqual()}" (click)="openMenu()"></button>
+  <dsa-lang-toggle
+    [path]="pathEqual()"
+    [ngClass]="{'header-lang_white': pathEqual()}"
+    *ngIf="media.isActive('gt-xs')"
+  >
+  </dsa-lang-toggle>
+  <div class="logo">
+    <a href="#" class="logo__link" [ngClass]="{'logo_white': pathEqual()}">
+      Homme
+    </a>
+  </div>
+  <div class="sign-in" *ngIf="!pathEqual()" >
+    <a
+      href="#"
+      class="sign-in__link btn"
+      [@langAnimation]="animateLanguage"
+      *ngIf="media.isActive('gt-xs')"
+    >
+        {{ 'main.sign-in' | translate:lang }}
+    </a>
+  </div>
+</header>

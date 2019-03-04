@@ -1,0 +1,20 @@
+<section class="section contacts" [@langAnimation]="animateLanguage">
+  <div class="contacts__title">{{ "contacts.title" | translate:lang }}</div>
+  <div class="contacts__work-time">
+    <span class="contacts__work-time_description">{{ "contacts.workTime.description" | translate:lang }}</span>
+    <span class="contacts__work-time_hours">{{ "contacts.workTime.hours" | translate:lang }}</span>
+  </div>
+  <ul class="contacts__list" fxLayout.lt-sm="column" fxLayoutAlign="space-between center ">
+    <li class="contacts__item"
+       *ngFor="let item of contacts"
+       l10nTranslate
+       fxLayout="column"
+    >
+      <img class="contacts__item_image" [src]="item.img" alt="">
+      <span class="contacts__item_phone">{{ item.phone }}</span>
+      <span class="contacts__item_name">{{ item.name | translate:lang }}</span>
+    </li>
+
+  </ul>
+
+</section>

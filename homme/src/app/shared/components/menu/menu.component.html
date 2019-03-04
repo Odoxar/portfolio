@@ -1,0 +1,21 @@
+<div class="menu">
+  <button class="btn menu__btn_close" (click)="menuClose()"></button>
+  <div class="logo" *ngIf="media.isActive('lt-sm')">
+    <a href="#" class="logo__link">
+      Homme
+    </a>
+  </div>
+  <button mat-button class="menu__item" *ngFor="let item of navItems" l10nTranslate [routerLink]="item.route" routerLinkActive="menu__item_active"
+    (click)="menuClose()">
+    {{ item.name }}
+  </button>
+  <div class="menu__item menu-lang" *ngIf="media.isActive('lt-sm')">
+    <dsa-lang-toggle></dsa-lang-toggle>
+  </div>
+  <div class="sign-in" *ngIf="media.isActive('lt-sm')">
+    <a href="#" class="sign-in__link btn" [@langAnimation]="animateLanguage">
+      {{ 'main.sign-in' | translate:lang }}
+    </a>
+  </div>
+</div>
+<div class="overlay" (click)="menuClose()"></div>

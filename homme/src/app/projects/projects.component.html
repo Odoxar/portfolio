@@ -1,0 +1,27 @@
+
+<section class="section projects_wrap">
+<div class="projects">
+  <h1 class="projects__title title" [@langAnimation]="animateLanguage">{{ "projects.title" |
+    translate:lang }}</h1>
+    <div class="projects__galery_wrap">
+      <mat-grid-list
+        class="projects__gallery"
+        [cols]="cols | async"
+        [rowHeight]="getRowHeight(cols | async)"
+        gutterSize="6px"
+        [@listAnimation]="items.length"
+      >
+        <mat-grid-tile class="projects__item" *ngFor="let item of items let ind=index" >
+          <img [src]="item.src" alt="" class="projects__item_image">
+          <a [routerLink]="[ item.id ]" class="projects__item_link"></a>
+          <div class="projects__item_description"  [@langAnimation]="animateLanguage">
+            <p class="description" l10nTranslate>{{ item.title }}</p>
+            <p class="description" l10nTranslate>{{ item.subtitle }}</p>
+          </div>
+
+
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+</div>
+</section>
